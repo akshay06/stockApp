@@ -1,0 +1,19 @@
+<table id="stocks">
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>New Price</td>
+        <td>Previous Price</td>
+        <td>Last Updated</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="(key, value) in MyData.requiredObj">
+        <td class="leftAlign">{{key}}</td>
+        <td ng-class="{'redColor': (value.newValue - value.oldValue < 0), 'greenColor': (value.newValue - value.oldValue > 0)}">{{value.newValue}}</td>
+        <td>{{value.oldValue}}</td>
+        <td>{{value.newTime}} ms ago</td>
+      </tr>
+    <tbody>
+ </tbody>
+</table>
