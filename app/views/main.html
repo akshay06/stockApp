@@ -1,10 +1,11 @@
+<h1 class="centerAlign">Stocks App</h1>
 <table id="stocks">
     <thead>
       <tr>
-        <td>Name</td>
-        <td>New Price</td>
-        <td>Previous Price</td>
-        <td>Last Updated</td>
+        <td ng-click="sortBy('name')">Name</td>
+        <td ng-click="sortBy('newPrice')">New Price</td>
+        <td ng-click="sortBy('oldPrice')">Previous Price</td>
+        <td ng-click="sortBy('lastUpdate')">Last Updated</td>
       </tr>
     </thead>
     <tbody>
@@ -12,7 +13,7 @@
         <td class="leftAlign">{{key}}</td>
         <td ng-class="{'redColor': (value.newValue - value.oldValue < 0), 'greenColor': (value.newValue - value.oldValue > 0)}">{{value.newValue}}</td>
         <td>{{value.oldValue}}</td>
-        <td>{{value.newTime}} ms ago</td>
+        <td>At {{value.newTime}}</td>
       </tr>
     <tbody>
  </tbody>

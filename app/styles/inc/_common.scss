@@ -19,10 +19,19 @@
     background-color: #4CAF50;
     color: white;
   }
+  .redColor, .greenColor {
+    -webkit-transition: background-color 500ms ease-in-out 1s;
+    -moz-transition: background-color 500ms ease-in-out 1s;
+    -o-transition: background-color 500ms ease-in-out 1s;
+    transition: background-color 500ms ease-in-out 1s;
+  }
   .redColor {
     background : red;
   }
   .greenColor {
     background : green;
   }
+}
+.centerAlign {
+  text-align: center;
 }

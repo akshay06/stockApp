@@ -4,6 +4,5 @@ angular.module('stockApp').controller('ParentController', [
   '$rootScope',
   '$state',
   function($scope, $rootScope, $state) {
-    console.log('called parent', $state);
   }
 ]);
