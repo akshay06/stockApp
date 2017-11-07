@@ -1,19 +1,22 @@
 <h1 class="centerAlign">Stocks App</h1>
+<div class="searchWrapper">
+  <input type="text" class="searchBox" placeholder="Search... " ng-model="searchInput">
+</div>
 <table id="stocks">
     <thead>
       <tr>
-        <td ng-click="sortBy('name')">Name</td>
-        <td ng-click="sortBy('newPrice')">New Price</td>
-        <td ng-click="sortBy('oldPrice')">Previous Price</td>
-        <td ng-click="sortBy('lastUpdate')">Last Updated</td>
+        <td>Name</td>
+        <td>New Price</td>
+        <td>Previous Price</td>
+        <td>Last Updated</td>
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="(key, value) in MyData.requiredObj">
+      <tr ng-if="!searchInput || key.indexOf(searchInput) !== -1" ng-repeat="(key, value) in StockData.requiredObj">
         <td class="leftAlign">{{key}}</td>
         <td ng-class="{'redColor': (value.newValue - value.oldValue < 0), 'greenColor': (value.newValue - value.oldValue > 0)}">{{value.newValue}}</td>
         <td>{{value.oldValue}}</td>
-        <td>At {{value.newTime}}</td>
+        <td>{{value.newTime - value.prevTime}} ms ago</td>
       </tr>
     <tbody>
  </tbody>

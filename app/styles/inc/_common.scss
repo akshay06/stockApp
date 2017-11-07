@@ -1,3 +1,15 @@
+.searchWrapper {
+  width: 300px;
+  margin: 40px auto;
+  .searchBox {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid;
+    width: 100%;
+    font-size: 24px;
+    padding: 0 10px;
+  }
+}
 #stocks {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
