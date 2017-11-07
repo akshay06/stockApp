@@ -1,6 +1,6 @@
 <h1 class="centerAlign">Stocks App</h1>
 <div class="searchWrapper">
-  <input type="text" class="searchBox" placeholder="Search... " ng-model="searchInput">
+  <input type="text" class="searchBox" placeholder="Search... " ng-model="searchInput" ng-change="searchStock()">
 </div>
 <table id="stocks">
     <thead>
@@ -13,11 +13,15 @@
     </thead>
     <tbody>
       <tr ng-if="!searchInput || key.indexOf(searchInput) !== -1" ng-repeat="(key, value) in StockData.requiredObj">
-        <td class="leftAlign">{{key}}</td>
+        <td class="leftAlign keyItem">{{key}}</td>
         <td ng-class="{'redColor': (value.newValue - value.oldValue < 0), 'greenColor': (value.newValue - value.oldValue > 0)}">{{value.newValue}}</td>
         <td>{{value.oldValue}}</td>
         <td>{{value.newTime - value.prevTime}} ms ago</td>
       </tr>
+      <tr ng-if="showNoResult">
+        <td colspan="4" class="text-center">No records found. <span class="cursorPointer" ng-click="$parent.searchInput = '';$parent.showNoResult=false;"><b>Show All Results></b></span></td>
+      </tr>
+
     <tbody>
  </tbody>
 </table>

@@ -10,6 +10,9 @@
     padding: 0 10px;
   }
 }
+.cursorPointer {
+  cursor: pointer;
+}
 #stocks {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -32,10 +35,10 @@
     color: white;
   }
   .redColor, .greenColor {
-    -webkit-transition: background-color 500ms ease-in-out 1s;
-    -moz-transition: background-color 500ms ease-in-out 1s;
-    -o-transition: background-color 500ms ease-in-out 1s;
-    transition: background-color 500ms ease-in-out 1s;
+    -webkit-transition: background-color 500ms ease-in-out;
+    -moz-transition: background-color 500ms ease-in-out;
+    -o-transition: background-color 500ms ease-in-out;
+    transition: background-color 500ms ease-in-out;
   }
   .redColor {
     background : red;
