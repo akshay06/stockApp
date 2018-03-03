@@ -1,5 +1,5 @@
 'use strict';
-angular.module('stockApp')
+angular.module('FtCash')
 
 .controller('MainController', function ($scope, StockData, $timeout) {
   $scope.StockData = StockData;

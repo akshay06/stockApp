@@ -1,5 +1,5 @@
 {
-  "name": "stockApp",
+  "name": "FtCash",
   "version": "0.0.0",
   "dependencies": {
     "angular-websocket": "^2.0.1",

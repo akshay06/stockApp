@@ -1,5 +1,5 @@
 'use strict';
-angular.module('stockApp')
+angular.module('FtCash')
 .factory('StockData', function($websocket) {
   // Open a WebSocket connection
   var dataStream = $websocket('ws://stocks.mnet.website');

@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('stockApp', [
+  .module('FtCash', [
     'ngCookies',
     'ngSanitize',
     'ngResource',

@@ -1,5 +1,5 @@
 'use strict';
-angular.module('stockApp').controller('ParentController', [
+angular.module('FtCash').controller('ParentController', [
   '$scope',
   '$rootScope',
   '$state',

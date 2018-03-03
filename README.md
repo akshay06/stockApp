@@ -1,4 +1,4 @@
-# stockApp
+# FtCash
 
 Steps to run the project :
 
